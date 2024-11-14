@@ -16,7 +16,7 @@ path_counts = Counter(row[2] for row in rows)
 
 
 # Sort the filtered rows by frequency first, then by path
-sorted_rows = sorted(rows, key=lambda row: (path_counts[row[2]], row[2]), reverse=True)
+sorted_rows = sorted(rows, key=lambda row: (path_counts[row[2]], row[2], row[1]))
 
 
 # Print sorted rows for verification
